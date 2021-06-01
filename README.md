@@ -106,3 +106,51 @@
 如果出錯的話，到 **build log** 的最上面檢查一下，確保他是使用 **C:/TDM-GCC-64/bin/mingw32-make.exe** 編譯，如果他是使用 **C:/MinGW** 之類的，那就代表你舊的MinGW沒有刪乾淨
 
 ![](img/build04.png)
+
+## 8. 測試
+跑完以後，再做一些設定就可測試啦
+
+將 **C:\opencv\build\install\x64\mingw\bin** 新增到系統路徑  
+設定->系統->關於->右邊的進階系統設定->環境變數  
+找 **path** 按**編輯**
+
+![](img/test01.png)
+
+點選**新增**，貼上 **C:\opencv\build\install\x64\mingw\bin**，然後確定
+
+![](img/test02-1.png)
+
+接下來回到 **CodeBlock**，進到 **Settings->Compiler**
+到 **Compiler settings->Compiler Flags**，勾選 **-std=c++11**
+
+![](img/test_c++11.png)
+
+到**Search directories** 分頁，在底下新增兩個路徑
+- **C:\opencv\build\install\include**
+- **C:\opencv\build\install\include\opencv2**
+
+![](img/test03.png)
+
+再到 **Compiler** 右邊的 **Linker** 分頁，新增 **C:\opencv\build\install\x64\mingw\lib**
+
+![](img/test04.png)
+
+再到 **Linker settings** 分頁，點底下 **ADD**，到 **C:\opencv\my_build\install\x64\mingw\lib**，把裡面檔案全選然後開啟
+
+![](img/test_linker.png)
+
+接下來都OK就可測試啦！
+
+![](img/test05.png)
+
+
+如果他跳出錯誤，說你**缺少 dll 檔**之類的，那就到 **C:\opencv\build\bin** 把所有的 **dll** 檔複製一份丟到你程式碼所在的資料夾
+
+![](img/test06.png)
+
+這樣應該就 **OK** 了，反正如果失敗我也沒有其他辦法，ㄏㄏ
+
+![](img/cat.jpg)
+
+作者：[@flyhighhigh_vc](https://www.instagram.com/flyhighhigh_vc/)  
+參考文章：[Sourabh Jigjinni on Medium](https://medium.com/@sourabhjigjinni/install-opencv-4-0-0-for-c-windows-7-10-code-blocks-tdm-gcc-64-dff65addf162)
