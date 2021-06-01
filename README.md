@@ -2,13 +2,15 @@
 
 ## 1. 前言
 
-這個方法是我在網路上找的，大多參考[這個網站](https://medium.com/@sourabhjigjinni/install-opencv-4-0-0-for-c-windows-7-10-code-blocks-tdm-gcc-64-dff65addf162)，然後把它改的詳細一點而已。
+這個方法是我在網路上找的，大多參考[這個網站](https://medium.com/@sourabhjigjinni/install-opencv-4-0-0-for-c-windows-7-10-code-blocks-tdm-gcc-64-dff65addf162)，然後把它改的詳細一點而已
+
+如果你的電腦裡有 **MinGW** 請暫時移除，包括孟駿提供的，之後再裝回來即可
 
 ## 2. 需要的工具
 
 要用到 **CodeBlock**，應該不會有人沒ㄅ
 
-其他要用的，可來我的[Google Drive下載](https://drive.google.com/file/d/1aLryH8sqTeMiGuKjUB-BDm1s3Jm3RAgc/view?usp=sharing)，裡面東西都是從官網來的。  
+其他要用的，可來我的[Google Drive下載](https://drive.google.com/file/d/1aLryH8sqTeMiGuKjUB-BDm1s3Jm3RAgc/view?usp=sharing)，裡面東西都是從官網來的  
 
 或者是你會怕，也可自己去官網下載：
 - [CMake](https://cmake.org/download/) 選x86-64.msi
@@ -52,9 +54,53 @@
 - **Grouped** 跟 **Advanced** 不用勾選  
 
 - 按 **Configure** 再選擇 **CodeBlocks - MinGW**  
-再 **Use default**
+用 **Use default native compilers**
 
-- 按下 **finish** ，等他跑完
+- 按下 **Finish** ，等他跑完
 
 ![](img/bin01.png)
 
+接下來要搜尋一些選項
+
+![](img/bin02.png)
+
+要**取消勾選**的有：
+- WITH_MSMF
+- WITH_IPP
+- WITH_TBB
+- ENABLE_PRECOMPILED_HEADERS
+- BUILD_PROTOBUF
+- PROTOBUF_UPDATE_FILES
+- WITH_PROTOBUF
+- OPENCV_ENABLE_ALLOCATOR_STATS
+- WITH_OPENCL_D3D11_NV
+
+要**勾選**的：
+- WITH_OPENCL
+- WITH_DIRECTX
+
+全部改好之後按 **Generate**，跑完就好了！
+
+## 7. Build
+到 **C:\opencv\build** 資料夾裡找 **OpenCV.cbp**，那是一個 CodeBlock 專案，點兩下直接開啟它，如果開不起來就先開 CodeBlock 再載入
+
+上面 **Settings->Compiler**，找底下的 **Toolchain executables** 分頁，把 **Compiler** 路徑改成 **C:\TDM-GCC-64**
+- **C compiler** 找 **C:\TDM-GCC-64\bin** 目錄的 **x86_64-w64-mingw32-gcc.exe**
+
+- **C++ complier** 選 **x86_64-w64-mingw32-g++.exe**
+
+- **Linker for dynamic** 選 **x86_64-w64-mingw32-g++.exe**
+
+- **Linker for static** 選 **x86_64-w64-mingw32-gcc-ar.exe**
+
+![](img/build01.png)
+
+按OK後，不要急著按build按鈕，先找到上面 **Build->Select target** 選 **install**
+
+![](img/build02.png)
+
+接下來就可以按下你熟悉的 **build** 按鈕啦(或者Ctrl+F9)，在底下 **build log** 就能看到它開始跑ㄌ，左邊的中括號裡面有百分比可以看
+
+![](img/build03.png)
+
+大概跑一個小時多
