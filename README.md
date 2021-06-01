@@ -4,7 +4,7 @@
 
 這個方法是我在網路上找的，大多參考[這個網站](https://medium.com/@sourabhjigjinni/install-opencv-4-0-0-for-c-windows-7-10-code-blocks-tdm-gcc-64-dff65addf162)，然後把它改的詳細一點而已
 
-如果你的電腦裡有 **MinGW** 請暫時移除，包括孟駿提供的，之後再裝回來即可
+如果你的電腦裡有 **MinGW 請移除**，包括孟駿提供的，之後再裝回來即可，**否則99.99%會失敗**
 
 ## 2. 需要的工具
 
@@ -95,7 +95,7 @@
 
 ![](img/build01.png)
 
-按OK後，不要急著按build按鈕，先找到上面 **Build->Select target** 選 **install**
+按OK後，不要急著按**build**按鈕，先找到上面 **Build->Select target** 選 **install**
 
 ![](img/build02.png)
 
@@ -103,4 +103,6 @@
 
 ![](img/build03.png)
 
-大概跑一個小時多
+如果出錯的話，到 **build log** 的最上面檢查一下，確保他是使用 **C:/TDM-GCC-64/bin/mingw32-make.exe** 編譯，如果他是使用 **C:/MinGW** 之類的，那就代表你舊的MinGW沒有刪乾淨
+
+![](img/build04.png)
