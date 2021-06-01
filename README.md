@@ -4,7 +4,7 @@
 
 這個方法是我在網路上找的，大多參考[這個網站](https://medium.com/@sourabhjigjinni/install-opencv-4-0-0-for-c-windows-7-10-code-blocks-tdm-gcc-64-dff65addf162)，然後把它改的詳細一點而已。
 
-## 工具
+## 需要的工具
 
 有打包好ㄌ，來我的[Google Drive下載](https://drive.google.com/file/d/1aLryH8sqTeMiGuKjUB-BDm1s3Jm3RAgc/view?usp=sharing)，裡面東西都是從官網來的。  
 
@@ -15,4 +15,27 @@
 
 ## 1. 安裝CMake
 
-執行我給的 cmake-3.20.3-windows-x86_64.msi
+執行我給的 **cmake-3.20.3-windows-x86_64.msi**
+
+選 **Add to system path for all user**
+
+![](img/cmake02.png)
+
+把安裝路徑改成 **C:\CMake**
+
+![](img/cmake03.png)
+
+再 **Install** 就 OK 啦！
+
+## 2. 安裝TDM-GCC
+執行 **tdm64-gcc-10.3.0-2.exe**  並 **create**
+
+![](img/tdm01.png)
+
+選 **MinGW-w64**
+
+![](img/tdm02.png)
+
+後面就都不改，照預設的安裝！
+
+## 
