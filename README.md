@@ -1,18 +1,18 @@
-# OPENCV ¦w¸Ë«ü«n
+# OPENCV å®‰è£æŒ‡å—
 
-### «e¨¥
+## å‰è¨€
 
-³o­Ó¤èªk¬O§Ú¦bºô¸ô¤W§äªº¡A¤j¦h°Ñ¦Ò[³o­Óºô¯¸](https://medium.com/@sourabhjigjinni/install-opencv-4-0-0-for-c-windows-7-10-code-blocks-tdm-gcc-64-dff65addf162)¡AµM«á§â¥¦§ïªº¸Ô²Ó¤@ÂI¦Ó¤w¡C
+é€™å€‹æ–¹æ³•æ˜¯æˆ‘åœ¨ç¶²è·¯ä¸Šæ‰¾çš„ï¼Œå¤§å¤šåƒè€ƒ[é€™å€‹ç¶²ç«™](https://medium.com/@sourabhjigjinni/install-opencv-4-0-0-for-c-windows-7-10-code-blocks-tdm-gcc-64-dff65addf162)ï¼Œç„¶å¾ŒæŠŠå®ƒæ”¹çš„è©³ç´°ä¸€é»è€Œå·²ã€‚
 
-### ¤u¨ã
+## å·¥å…·
 
-¦³¥´¥]¦n£{¡A¨Ó§Úªº[Google Drive¤U¸ü](https://drive.google.com/file/d/1aLryH8sqTeMiGuKjUB-BDm1s3Jm3RAgc/view?usp=sharing)¡A¸Ì­±ªF¦è³£¬O±q©xºô¨Óªº¡C  
+æœ‰æ‰“åŒ…å¥½ã„Œï¼Œä¾†æˆ‘çš„[Google Driveä¸‹è¼‰](https://drive.google.com/file/d/1aLryH8sqTeMiGuKjUB-BDm1s3Jm3RAgc/view?usp=sharing)ï¼Œè£¡é¢æ±è¥¿éƒ½æ˜¯å¾å®˜ç¶²ä¾†çš„ã€‚  
 
-©ÎªÌ¬O§A·|©È¡A·Q¦Û¤v¥h©xºô¤U¸ü¡G
-- [CMake](https://cmake.org/download/) ¿ïx86-64.msi
-- [TDM-GCC](https://jmeubank.github.io/tdm-gcc/) ¿ï¥ªÃäªºMinGW-w64
-- [OpenCV](https://opencv.org/releases/) ¿ï¥ô¤@­Óª©¥»ªºSources¤U¸ü¡C³Ğ«Ø¤@­Ó·s¸ê®Æ§¨opencv¡A¸Ì­±³Ğ¨â­ÓªÅ¸ê®Æ§¨build¡Bsource¡AµM«á§â­è­è¤U¸üªºÀÉ®×¸ÑÀ£ÁY«á¥á¤Jsource
+æˆ–è€…æ˜¯ä½ æœƒæ€•ï¼Œæƒ³è‡ªå·±å»å®˜ç¶²ä¸‹è¼‰ï¼š
+- [CMake](https://cmake.org/download/) é¸x86-64.msi
+- [TDM-GCC](https://jmeubank.github.io/tdm-gcc/) é¸å·¦é‚Šçš„MinGW-w64
+- [OpenCV](https://opencv.org/releases/) é¸ä»»ä¸€å€‹ç‰ˆæœ¬çš„Sourcesä¸‹è¼‰ã€‚å‰µå»ºä¸€å€‹æ–°è³‡æ–™å¤¾opencvï¼Œè£¡é¢å‰µå…©å€‹ç©ºè³‡æ–™å¤¾buildã€sourceï¼Œç„¶å¾ŒæŠŠå‰›å‰›ä¸‹è¼‰çš„æª”æ¡ˆè§£å£“ç¸®å¾Œä¸Ÿå…¥source
 
-### 1. ¦w¸ËCMake
+## 1. å®‰è£CMake
 
-°õ¦æ§Úµ¹ªº cmake-3.20.3-windows-x86_64.msi
+åŸ·è¡Œæˆ‘çµ¦çš„ cmake-3.20.3-windows-x86_64.msi
