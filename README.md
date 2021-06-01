@@ -93,7 +93,7 @@
 
 - **Linker for static** 選 **x86_64-w64-mingw32-gcc-ar.exe**
 
-![](img/build01.png)
+![](img/build01-1.png)
 
 按OK後，不要急著按**build**按鈕，先找到上面 **Build->Select target** 選 **install**
 
